@@ -82,6 +82,11 @@
         </ul>
 
         <ul class="navbar-nav">
+          {% if session.get("user_id") %}
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link fs-4" href="{{ url_for('atsauksme')}}">Rakstīt atsauksmi</a>
+          </li>
+          {% endif %}
           {% if session.get('username') %}
           <li class="nav-item me-3">
             <span class="nav-link fs-5 text-white">Sveiks/a, {{ session['username'] }}!</span>

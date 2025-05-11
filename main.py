@@ -74,20 +74,16 @@ def atsauksme():
         return redirect(url_for("login"))
     
     if request.method == "POST":
+            atsauksme_text = request.form.get("atsauksme")
+            user_id = session["user_id"]
 
-        print("Formas dati:")
-        print(request.form)
+            conn = sqlite3.connect('database.db')
+            c = conn.cursor()
+            c.execute("INSERT INTO reviews (user_id, review) VALUES (?, ?)", (user_id, atsauksme_text))
+            conn.commit()
+            conn.close()
 
-        atsauksme_text = request.form["atsauksme"]
-        user_id = session["user_id"]
-
-        conn = sqlite3.connect('database.db')
-        c = conn.cursor()
-        c.execute("INSERT INTO reviews (user_id, review) VALUES (?, ?)", (user_id, atsauksme_text))
-        conn.commit()
-        conn.close()
-
-        return redirect(url_for("atsauksmes"))
+            return redirect(url_for("atsauksmes"))
     
     return render_template("atsauksme.html")
 

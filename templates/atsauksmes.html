@@ -2,6 +2,16 @@
 
 {% block saturs %}
 
+<h1>Atsauksmes</h1>
+    {% if session.get("user_id") %}
+        <div class="text-end mb-4">
+          <a href="{{ url_for('atsauksme') }}" class="btn btn-primary">Rakstīt atsauksmi</a>  
+        </div>
+    {% else %}
+        <p class="text-muted">Lai atstātu atsauksmi, <a href="{{ url_for('login')}}">pieslēdzies</a>.</p>
+    {% endif %}
+
+
 <div class="container mt-5">
     <h2 class="mb-4 text-center">Visas atsauksmes</h2>
 
