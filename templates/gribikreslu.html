@@ -1,0 +1,69 @@
+{% extends 'patilapa.html' %}
+
+{% block saturs %}
+
+<style>
+    .row-section {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 30px;
+        padding: 40px;
+        flex-wrap: wrap;
+    }
+    .image {
+        max-width: 300px;
+        height: auto;
+        border-radius: 10px;
+    }
+    .text {
+        max-width: 500px;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-top: 30px;
+    }
+</style>
+
+<h1 style="text-align: center;" class="mb-5">Mūsu krēsli</h1>
+
+<div class="row-section">
+    <img src="{{ url_for('static', filename='kresls0.jpg') }}" alt="Description" class="image">
+        <div class="text">
+            <p>Salokāmais krēsls ir izstrādāts, lai ietaupītu vietu, neapdraudot stilu. Neatkarīgi no tā, vai jums ir nepieciešama sēdvieta gaitenī vai uzgaidāmajā telpā, šis salokāmais krēsls jums to nodrošinās. Ar savu eleganto un kompakto dizainu tas viegli iederas jebkurā telpā, vienlaikus piešķirot eleganci.</p>
+            <a href="https://www.etsy.com/listing/1243492050/wall-mounted-folding-chair-for-hallways?utm_source=chatgpt.com" target="_blank" style="font-size: 16px; color: #007bff; text-decoration: none;">
+                Kur pirkt
+            </a>
+        </div>
+</div>
+
+<div class="row-section">
+    <img src="{{ url_for('static', filename='kresls1.jpg') }}" alt="Description" class="image">
+        <div class="text">
+            <p>Ne tikai moderns, pie sienas stiprināms ieejas sols apavu maiņai vai atpūtai, bet arī saliekams vannas istabas krēsls cilvēkiem ar ierobežotām pārvietošanās spējām, lai baudītu mājas dušu vai spa, ļoti ērti. Ja mājās ir vecāka gadagājuma cilvēki, grūtnieces un bērni, tas ir vēl jo vairāk nepieciešams! Pie sienas stiprināms, saliekams un vietu taupošs. Šo saliekamo sēdekli var izmantot jebkurā mājas telpā. Ideāli piemērots, lai viesiem nodrošinātu vietu, kur novilkt apavus, vai nelielai atpūtai.</p>
+            <a href="https://www.ubuy.lv/en/product/ML41MRJ6U-solitar-wall-mounted-folding-entryway-shoe-changing-stool-chair-foldable-bathroom-seating-solid-wood-folding-stool-invisible-shoe-bench-for-restroom?utm_source=chatgpt.com" target="_blank" style="font-size: 16px; color: #007bff; text-decoration: none;">
+                Kur pirkt
+            </a>
+        </div>
+</div>
+
+<div class="row-section">
+    <img src="{{ url_for('static', filename='kresls2.jpg') }}" alt="Description" class="image">
+        <div class="text">
+            <p>Pufu ieliktnis ir izgatavots no augstas kvalitātes poliestera, pastiprinātas vīles, laba elpojamība, izturība. Super ērts, lieliski piemērots sēdēšanai, atpūtai. Katram oderējumam ir garš rāvējslēdzējs, lai to būtu viegli piepildīt un droši aiztaisīt.</p>
+            <a href="https://www.amazon.com/AbunHeri-Inner-Insert-Replacement-Zipper/dp/B0BY6XTBBX/ref=sr_1_41?crid=6U0DBR5CZFGR&dib=eyJ2IjoiMSJ9.8f-jH-rBtt_ySv8bzXaP6rO5ISUgs10TU04fuDOnjGHkoCOvZJU110Z-rheCQ0vtxI04cUSi6RAipieAqZdc1-9Fe_6Lde-2XWh64BGUJgDu0N9evHTDyFqOThLNCxaeWCf_ITc9LOTebwNH7Q071w9XQchwx5-kAwZcvZ-XfkJNvMkFfpypjRDoikUxTrST82nQu3da3dWhs0n01yWCRXb-Zr_PKApVgD93Zt0qooXHDKWI4TIolXk6IfrvPmGRBfA2pSynXZRhYPUflBkLXhU4smf0z5Mqwz9z2eFAYW8.oYIZRq67KFoYPsOX2zfKpnsbV9J-g92sfC0lpMrMvRQ&dib_tag=se&keywords=bean%2Bbag&qid=1746970045&sprefix=bean%2Bb%2Caps%2C256&sr=8-41&th=1" target="_blank" style="font-size: 16px; color: #007bff; text-decoration: none;">
+                Kur pirkt
+            </a>
+        </div>
+</div>
+
+<div class="row-section">
+    <img src="{{ url_for('static', filename='kresls3.jpg') }}" alt="Description" class="image">
+        <div class="text">
+            <p>Šī divdaļīgā akcenta krēslu komplekta pūkainais dizains piešķir jūsu viesistabai vai mājas birojam īpaši greznu izskatu. Abu krēslu rāmis ir izgatavots no masīva dižskābarža koka dabīgā apdarē. Tiem ir uzliesmojošas, konusveida kājas ar melniem akcentiem modernam izskatam. Sēdeklis un atzveltne ir apvilkti ar mākslīgo mongoļu kažokādu, radot tekstūras slāņos, kas piešķir jūsu telpai īpaši greznu sajūtu. Turklāt tie ir pildīti ar putu pildījumu, lai nodrošinātu labu sēdekļa atbalstu.</p>
+            <a href="https://www.wayfair.com/furniture/pdp/mistana-teen-engles-accent-chair-with-beech-legs-w004764917.html?piid=1966049630" target="_blank" style="font-size: 16px; color: #007bff; text-decoration: none;">
+                Kur pirkt
+            </a>
+        </div>
+</div>
+
+{% endblock %}

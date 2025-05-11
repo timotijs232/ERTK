@@ -1,0 +1,16 @@
+{% extends 'patilapa.html' %}
+
+{% block saturs %}
+
+<div class="container mt-5" style="max-width: 600px;">
+    <h2 class="mb-4 text-center">Uzraksti atsauksmi</h2>
+    <form method="POST" action="/atsauksme">
+        <div class="mb-3">
+            <label class="form-label">Atsauksme</label>
+            <textarea class="form-control" name="atsauksme" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Iesniegt</button>
+    </form>
+</div>
+
+{% endblock %}

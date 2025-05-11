@@ -1,0 +1,86 @@
+{% extends 'patilapa.html' %}
+
+{% block saturs %}
+
+<h1 style="text-align: center;" class="mb-5">ERTK - Ērta vide skolas gaiteņos</h1>
+
+<div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-0 row-gap-3">
+  <div class="p-2 d-flex justify-content-center text-center">
+        <figure>
+            <blockquote class="blockquote">
+              <p>"Prasās ērtas sēdvietas"</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              Kate Briede <cite title="Source Title">11.C</cite>
+            </figcaption>
+          </figure>
+    </div>
+    <div class="p-2 d-flex justify-content-center text-center">
+        <figure>
+            <blockquote class="blockquote">
+              <p>"Esmu vientuļš, gribās kur piesēst starpbrīžos"</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              Ernests Mezītis <cite title="Source Title">9.B</cite>
+            </figcaption>
+          </figure>
+    </div>
+    <div class="p-2 d-flex justify-content-center text-center">
+        <figure>
+            <blockquote class="blockquote">
+              <p>"Man sāp sirds, redzot, ka gaiteņos ir tikai gaitenis"</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              Roberts Krapāns <cite title="Source Title">10.A</cite>
+            </figcaption>
+          </figure>
+    </div>
+    <div class="p-2 d-flex justify-content-center text-center">
+        <figure>
+            <blockquote class="blockquote">
+              <p>"Man vajag krēslus gaitenī, jo kājas sāp no treniņiem"</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              Rodrigo Jānītis <cite title="Source Title">7.A</cite>
+            </figcaption>
+          </figure>
+    </div>
+  </div>
+    
+  <div id="carouselExample" class="carousel slide" style="max-width: 600px; margin: auto;">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0_2xt5uJ7B0hMjm_qjy0hfKQypJMKZbl98w&s" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://thumbs.dreamstime.com/b/hish-school-hallway-3938261.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://thumbs.dreamstime.com/b/serene-indoor-oasis-tables-benches-school-hall-decorated-lush-greenery-tranquil-hallway-features-rows-376992684.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <style>
+    .carousel-item img {
+      height: 400px;
+      object-fit: cover;
+    }
+  </style>
+
+<div class="container my-5 pt-5">
+  <h2>Mūsu mērķis</h2>
+  <p class="fs-5 my-5">
+    Mēs esam skolēnu komanda, kas vēlas uzlabot skolas vidi, piedāvājot ērtus, modernus un vietu taupošus krēslus gaiteņos. Mūsu mērķis ir izveidot "telpu" kur ikviens var justies ērti arī starpbrīžos - sēdēt, atpūsties vai vienkārši uzelpot.
+  </p>
+</div>
+
+{% endblock %}

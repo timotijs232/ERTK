@@ -1,0 +1,36 @@
+{% extends 'patilapa.html' %}
+
+{% block saturs %}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Visas atsauksmes</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Lietotājs</th>
+                    <th>Atsauksme</th>
+                    <th>Datums</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for vards, review, laiks in atsauksme %}
+                <tr>
+                    <td class="text-center fw-semibold">{{ vards }}</td>
+                    <td>{{ review }}</td>
+                    <td class="text-center text-muted">{{ laiks.split(" ")[0] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<form method="POST" action="/iztirit" class="mt-4 text-center">
+    <button type="submit" class="btn btn-danger" onclick="return confirm('Vai tiešām vēlies dzēst atsauksmes?')">
+        Dzēst visas atsauksmes
+    </button>
+</form>
+
+{% endblock %}

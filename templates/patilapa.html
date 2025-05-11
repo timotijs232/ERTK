@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  
+
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ERTK</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="mystyle.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+.parallax {
+
+  background-image: url("{{ url_for('static', filename='bilde1.jpg') }}");
+
+
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 0;
+  padding-top: 0;
+}
+
+</style>
+
+</head>
+<body>
+
+  {% if request.endpoint == 'sakums' %}
+  <div class="parallax d-flex justify-content-center align-items-center">
+    <div style="
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 120px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+      ">
+        ERTK
+      </div>
+    </div>
+  {% endif %}
+  
+
+
+  <nav class="navbar navbar-expand-lg" style="background-color: #858b8f;">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link fs-4"  href="{{url_for('sakums')}}">Sākums</a>
+          </li>    
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link fs-4" href="{{url_for('atsauksmes')}}">Atsauksmes</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link fs-4" href="{{url_for('gribikreslu')}}">Krēsli</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav">
+          {% if session.get('username') %}
+          <li class="nav-item me-3">
+            <span class="nav-link fs-5 text-white">Sveiks/a, {{ session['username'] }}!</span>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-light" href="{{url_for('logout')}}">Atslēgties</a>
+          </li>
+          {% else %}
+            <li class="nav-item me-2">
+              <a class="btn btn-outline-light" href="{{url_for('login')}}">Pieslēgties</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-light" href="{{url_for('autorizeties')}}">Autorizēties</a>
+            </li>
+          {% endif %}
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+<main>
+    <div class="p-5" style="min-height: 1000px;background-color: white;font-size: 36px;">
+      {% block saturs %}{% endblock %}
+    </div>
+</main>
+
+<footer class="footer mt-auto py-3 bg-light border-top">
+  <div class="container text-center">
+    <span class="text-muted">© 2025 ERTK · Sazinies: <a href="mailto:info@ertk.lv">info@ertk.lv</a></span>
+  </div>
+</footer>
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

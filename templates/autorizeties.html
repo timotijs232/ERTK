@@ -1,0 +1,28 @@
+{% extends 'patilapa.html' %}
+
+{% block saturs %}
+<div class="container mt-5" style="max-width: 600px;">
+  <h2 class="mb-4 text-center">Reģistrācija</h2>
+
+  <form method="POST">
+
+    <div class="mb-3">
+      <label class="form-label">Vārds</label>
+      <input type="text" class="form-control" name="username" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">E-pasts</label>
+      <input type="email" class="form-control" name="email" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Parole</label>
+      <input type="password" class="form-control" name="password" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Reģistrēties</button>
+  </form>
+
+</div>
+{% endblock %}
